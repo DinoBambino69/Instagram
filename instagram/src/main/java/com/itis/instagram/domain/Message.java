@@ -1,6 +1,9 @@
 package com.itis.instagram.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Message {
@@ -8,7 +11,10 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @NotBlank(message = "Fill the message")
+    @Length(max = 255, message = "So long!")
     private String text;
+    @Length(max = 100, message = "So long!")
     private String tag;
 
     public String getAuthorName() {
