@@ -77,4 +77,17 @@ public class RegistrationController {
 
         return "redirect:/login";
     }
+
+    @GetMapping("/activate/{code}")
+    public String activate(Model model, @PathVariable String code) {
+        boolean isActivate = userService.activateUser(code);
+
+        if (isActivate) {
+            model.addAttribute("message", "User activate");
+        } else {
+            model.addAttribute("message", "Activation code not found");
+        }
+
+        return "login";
+    }
 }
