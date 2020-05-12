@@ -2,6 +2,7 @@
 <#import "pager.ftlh" as p>
 
 <@p.pager url page />
+
 <div class="card-columns" id="message-list">
     <#list page.content as message>
         <div class="card my-3">
