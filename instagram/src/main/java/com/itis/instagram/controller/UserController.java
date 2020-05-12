@@ -3,8 +3,6 @@ package com.itis.instagram.controller;
 import com.itis.instagram.domain.Role;
 import com.itis.instagram.domain.User;
 import com.itis.instagram.service.UserService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
