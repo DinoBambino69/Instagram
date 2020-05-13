@@ -28,6 +28,9 @@
                     <a class="nav-link" href="/user/profile">Profile</a>
                 </li>
             </#if>
+            <li class="nav-item">
+                <a class="nav-link" href="/chatMessages">Chat</a>
+            </li>
         </ul>
 
         <div class="navbar-text mr-3">${name}</div>

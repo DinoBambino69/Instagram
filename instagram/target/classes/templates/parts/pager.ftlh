@@ -9,7 +9,6 @@
         bodyBefore = (pageNumber > 4 && pageNumber < totalPages - 1)?then([pageNumber - 2, pageNumber - 1], [])
         bodyAfter = (pageNumber > 2 && pageNumber < totalPages - 3)?then([pageNumber + 1, pageNumber + 2], [])
 
-
         body = head + bodyBefore + (pageNumber > 3 && pageNumber < totalPages - 2)?then([pageNumber], []) + bodyAfter + end
         >
     <#else>
@@ -22,7 +21,7 @@
                     <a class="page-link" href="" tabindex="-1">Previous</a>
                 </li>
                 <#list body as p>
-                    <#if p - 1 == page.getNumber()>
+                    <#if (p - 1) == page.getNumber()>
                         <li class="page-item active">
                             <a class="page-link" href="#" tabindex="-1">${p}</a>
                         </li>
@@ -32,7 +31,7 @@
                         </li>
                     <#else>
                         <li class="page-item">
-                            <a class="page-link" href="${url}?page=${p - 1}" tabindex="p - 1">${p}</a>
+                            <a class="page-link" href="${url}?page=${p - 1}&size=${page.getSize()}" tabindex="-1">${p}</a>
                         </li>
                     </#if>
                 </#list>

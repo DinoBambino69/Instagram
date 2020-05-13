@@ -18,7 +18,6 @@ import org.springframework.web.client.RestTemplate;
 import javax.validation.Valid;
 import java.util.Collections;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @Controller
 public class RegistrationController {
